@@ -56,7 +56,7 @@ class Program
 
         Console.WriteLine("LongProcess 5 Completed");
 
-        return "method 4";
+        return "method 5";
     }
 
 
