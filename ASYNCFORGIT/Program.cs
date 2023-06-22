@@ -1,20 +1,19 @@
-  
+
 class Program
 {
-
-
     static async Task Main(string[] args)
     {
         var result1 = await LongProcess1();
         var result2 = await LongProcess2();
-        var result3 = await LongProcess3(); 
-        var result4 = await LongProcess4(); 
-
-      
+        var result3 = await LongProcess3();
+        var result4 = await LongProcess4();
+        var result5 = await LongProcess5();
+ 
         Console.WriteLine(result1);
         Console.WriteLine(result2);
         Console.WriteLine(result3);
         Console.WriteLine(result4);
+        Console.WriteLine(result5);
         Console.ReadKey();
         
     }
@@ -48,7 +47,7 @@ class Program
         Console.WriteLine("LongProcess 3 Completed");
 
         return 3;
-
+    }
     static async Task<string> LongProcess4()
     {
         Console.WriteLine("LongProcess 4 Started");
@@ -59,8 +58,17 @@ class Program
 
         return "method 4";
     }
+        
+    static async Task<string> LongProcess5()
+    {
+        Console.WriteLine("LongProcess 5 Started");
 
+        await Task.Delay(4000);
 
+        Console.WriteLine("LongProcess 5 Completed");
 
+        return "method 5";
+    }
 
 }
+
