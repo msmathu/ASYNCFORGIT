@@ -8,6 +8,7 @@ class Program
         var result3 = await LongProcess3();
         var result4 = await LongProcess4();
         var result5 = await LongProcess5();
+ 
         Console.WriteLine(result1);
         Console.WriteLine(result2);
         Console.WriteLine(result3);
