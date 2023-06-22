@@ -7,6 +7,11 @@ class Program
     {
         var result1 = await LongProcess1();
         var result2 = await LongProcess2();
+
+        var result3 = await LongProcess3(); 
+        Console.WriteLine(result1);
+        Console.WriteLine(result2);
+        Console.WriteLine(result3);
         var result4 = await LongProcess4(); 
         Console.WriteLine(result1);
         Console.WriteLine(result2);
@@ -35,6 +40,16 @@ class Program
 
         return 2;
     }
+    static async Task<int> LongProcess3()
+    {
+        Console.WriteLine("LongProcess 3 Started");
+
+        await Task.Delay(4000);
+
+        Console.WriteLine("LongProcess 3 Completed");
+
+        return 3;
+
     static async Task<string> LongProcess4()
     {
         Console.WriteLine("LongProcess 4 Started");
